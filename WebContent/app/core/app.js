@@ -2,7 +2,7 @@ var APP_NAME='MaintenenceApp';
 (function(){
 	angular.module(APP_NAME, ['ui.bootstrap','ui.router','session',
 	                          'ngMessages','ngTouch','ui.grid'])
-	.run(function($http,APP_CONSTANT,serverURLFactory) {
+	.run(function($http,APP_CONSTANT,serverURLFactory,$rootScope) {
 		 /**
 		   * Initialising application level configuration
 		   * Reading config.json file
@@ -23,5 +23,19 @@ var APP_NAME='MaintenenceApp';
 			   */
 			  serverURLFactory.setServerURLs(response.urls);
 		  });
+		  
+//Loader bewteen state resolution
+		    $rootScope
+		        .$on('$stateChangeStart', 
+		            function(event, toState, toParams, fromState, fromParams){ 
+		                $("#ui-view").html("");
+		                $(".page-loading").removeClass("hidden");
+		        });
+
+		    $rootScope
+		        .$on('$stateChangeSuccess',
+		            function(event, toState, toParams, fromState, fromParams){ 
+		                $(".page-loading").addClass("hidden");
+		        });
 	});
 })();

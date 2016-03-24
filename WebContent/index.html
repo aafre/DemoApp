@@ -9,7 +9,10 @@
 <link rel="stylesheet" href="css/main.css">
 
 <body ng-app="MaintenenceApp">
-<ui-view></ui-view>
+<div class="page-loading" align="center">
+<img src="images/loader.gif" align="middle">
+</div>
+<div ui-view id="ui-view"></div>
 
 <script src="js/angular.min.v1.4.7.js"></script>
 <script src="js/angular-ui-router.min.js"></script>
