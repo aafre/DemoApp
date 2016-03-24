@@ -4,12 +4,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Maintenence APP</title>
 </head>
-<!-- ALL CSS GOES HERE
-<link rel="stylesheet" href="app/modules/tenders/css/tender.css"> -->
+<!-- ALL CSS GOES HERE-->
+<link rel="stylesheet" href="css/bootstrap.min.css"> 
+<link rel="stylesheet" href="css/main.css">
 
 <body ng-app="MaintenenceApp">
 <ui-view></ui-view>
-
 
 <script src="js/angular.min.v1.4.7.js"></script>
 <script src="js/angular-ui-router.min.js"></script>
@@ -31,14 +31,19 @@
 <script src="app/core/sessions/sessionModule.js"></script>
 <script src="app/core/sessions/sessionFactory.js"></script>
 
-
-
 <!-- Registration Module -->
-<!-- <script src="app/modules/register/config/config.js"></script> -->
 <script src="app/modules/register/constants/constant.js"></script>
 <script src="app/modules/register/controllers/registerController.js"></script>
 <script src="app/modules/register/services/registerService.js"></script>
 
+<!-- Login Module -->
+<script src="app/modules/login/constants/constant.js"></script>
+<script src="app/modules/login/controllers/loginController.js"></script>
+<script src="app/modules/login/services/loginService.js"></script>
 
+<!-- Dashboard Module -->
+<script src="app/modules/dashboard/constants/constant.js"></script>
+<script src="app/modules/dashboard/controllers/dashboardController.js"></script>
+<script src="app/modules/dashboard/services/dashboardService.js"></script>
 
 </html>
