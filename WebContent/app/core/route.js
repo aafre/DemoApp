@@ -25,6 +25,11 @@
 			      templateUrl   : "app/modules/dashboard/views/dashboard.html",
 			      controller    : "DashboardController"
 			  	})
+			.state("activity", {
+			      url          : "/activity",
+			      templateUrl   : "app/modules/activity/views/activity.html",
+			      controller    : "ActivityController"
+			  	}) 	
 		   .state('modules', {
 		      url: '/modules',
 		      "abstract" : true,

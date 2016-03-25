@@ -1,3 +1,22 @@
+.no-outline {
+	border:0px;
+ 	outline:0px;
+}
+.progress {
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;	
+}
+.pending {
+	background-color: #ff3300;
+}
+.complete {
+	background-color: #a6ff4d;
+}
+.na{
+	background-color: #5e5755;
+}
+
 .hidden {
   display: none !important;
   visibility: hidden !important;

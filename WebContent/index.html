@@ -9,11 +9,14 @@
 <link rel="stylesheet" href="css/main.css">
 
 <body ng-app="MaintenenceApp">
+	
 <div class="page-loading" align="center">
 <img src="images/loader.gif" align="middle">
 </div>
 <div ui-view id="ui-view"></div>
 
+		
+		
 <script src="js/angular.min.v1.4.7.js"></script>
 <script src="js/angular-ui-router.min.js"></script>
 <script src="js/jquery-2.1.4.min.js"></script>
@@ -48,5 +51,10 @@
 <script src="app/modules/dashboard/constants/constant.js"></script>
 <script src="app/modules/dashboard/controllers/dashboardController.js"></script>
 <script src="app/modules/dashboard/services/dashboardService.js"></script>
+
+<!-- Activity Module -->
+<script src="app/modules/activity/constants/constant.js"></script>
+<script src="app/modules/activity/controllers/activityController.js"></script>
+<script src="app/modules/activity/services/ActivityService.js"></script>
 
 </html>

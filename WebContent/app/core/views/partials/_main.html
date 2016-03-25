@@ -1,3 +1,14 @@
-<a ui-sref="login">Login</a>
-<a ui-sref="register">Register</a>
-<a ui-sref="dashboard">Dashboard</a>
+<div ng-controller="HomeCtrl">
+<!-- Home page before login -->
+<div>
+ 	<button type="button" class="btn btn-primary btn-lg" ng-click="route('login')">Login</button>
+	<a ui-sref="activity">Activity</a>
+</div>
+
+
+<!-- Home page after login -->
+<div>
+ 	<button type="button" class="btn btn-primary btn-lg" >Windows</button>
+ 	<button type="button" class="btn btn-primary btn-lg" >Linux</button>
+</div>
+</div>

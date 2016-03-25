@@ -1,0 +1,45 @@
+<div ng-controller="ActivityController" class="container-fluid">
+ <!--================ Header ====================-->
+ 		<div ng-include="'app/core/views/partials/_header.html'"></div>
+ 
+ <div class="progress">
+    <div class="progress-bar" role="progressbar"  aria-valuemin="0" aria-valuemax="100" style="width:{{percentProgress}}%" >
+      {{percentProgress}}%
+    </div>
+ </div>
+ 
+ <!-- Table content -->
+  <div class="table-responsive">
+ 	<table class="table table-hover">
+ 		<thead>
+ 		  <tr>	
+ 			<th>#</th>
+ 			<th>Step</th>
+ 			<th>Status</th>
+ 			<th>Last Updated At</th>
+ 		  </tr>	
+ 		</thead>
+ 		<tbody>
+ 		  <tr ng-repeat="act in activity">
+ 		  	<td>{{$index+1}}</td>
+ 		  	<td>{{act.stepName}}</td>
+ 		  	<td>
+ 		  	<select class="form no-outline" ng-model='list[$index]' ng-change="getImgSrc($index)"  ng-options='status for status in statusList'>
+ 		  		<option value="">- Please Select -</option>
+ 		  		</select>
+ 		  		<img alt="{{msg[$index]}}" class="no-outline" width="20px" height="20px" src="{{path[$index]}}">
+ 		  	</td>
+ 		  	<td>{{dateTime[$index] | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+ 		  </tr>
+ 		
+ 		</tbody>
+ 	</table>
+ <div align="center">
+ <button class="btn btn-md btn-primary" type="button" style="width:13%;">
+                    Back</button>
+  <button class="btn btn-md btn-primary" type="button" style="width:13%;">
+                    Save</button>
+</div>
+ </div>		
+</div>
+
