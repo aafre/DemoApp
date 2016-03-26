@@ -5,6 +5,9 @@
 	     function($scope, sessionFactory, $timeout, APP_CONSTANT, util,$state) {
 	    	$scope.route = function(key){
 	    		util.route(key);
-	    	}
+	    	};
+	    	$scope.logout = function(){
+	    		sessionFactory.doLogout();
+	    	};
 	    }]);
 })();

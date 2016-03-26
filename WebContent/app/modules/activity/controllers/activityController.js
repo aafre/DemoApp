@@ -9,7 +9,7 @@
 			$scope.path = [];	// array to display correct status image 
 			$scope.msg = [];	//alt for image
 			$scope.dateTime = [];	//array to store the date time stamp at which the status is updated
-			
+			$scope.makersCheck = []; // to update the check status by maker
 			$scope.activity = [
 			  {
 				  "stepName": "Step One",
@@ -75,12 +75,15 @@
 				}
 				else{
 					$scope.path[index]=$scope.path[index]+'error.png';
-					$scope.msg[index]="You haven't set a status yet for this step.";
+					$scope.msg[index]="Status not updated.";
 				}
 			//	console.log($scope.path);
 				$scope.progress();
 			};
 			
+			/**
+			 * Function to update the progress bar.
+			 */
 			$scope.progress = function(){
 				var total = $scope.activity.length;
 				var count = 0;

@@ -1,0 +1,16 @@
+{
+	"moduleType" : "public",
+    "routes" : [
+		{
+            "parentState"   : "modules",
+            "state"         : "admin",
+            "cache"			: "false",
+            "url"           : "/admin",
+            "views": {
+        		"content" :{
+       					"templateUrl"   : "app/modules/admin/views/admin.html"   	
+        		}
+      		}
+	     }
+	]
+}

@@ -2,6 +2,8 @@
  <!--================ Header ====================-->
  		<div ng-include="'app/core/views/partials/_header.html'"></div>
  
+ <!-- Show this div for Maker's Login -->
+ <div ng-show="true">
  <div class="progress">
     <div class="progress-bar" role="progressbar"  aria-valuemin="0" aria-valuemax="100" style="width:{{percentProgress}}%" >
       {{percentProgress}}%
@@ -40,6 +42,42 @@
   <button class="btn btn-md btn-primary" type="button" style="width:13%;">
                     Save</button>
 </div>
- </div>		
+ </div>	
+ </div>	
+ 
+ <!-- This div is for the checkers login -->
+ <div ng-show="false">
+ 
+  <!-- Table content -->
+  <div class="table-responsive">
+ 	<table class="table table-hover">
+ 		<thead>
+ 		  <tr>	
+ 			<th>#</th>
+ 			<th>Step</th>
+ 			<th>Status</th>
+ 			<th>Updated At</th>
+ 			<th>Mark as complete</th>
+ 		  </tr>	
+ 		</thead>
+ 		<tbody>
+ 		  <tr ng-repeat="act in activity">
+ 		  	<td>{{$index+1}}</td>
+ 		  	<td>{{act.stepName}}</td>
+ 		  	<td>{{act.status}}</td>
+ 		  	<td>{{act.updatedAt}}</td>
+ 		  	<td> <input type="checkbox" ng-model="makersCheck[$index]" /></td>
+ 		  </tr>
+ 		
+ 		</tbody>
+ 	</table>
+ <div align="center">
+ <button class="btn btn-md btn-primary" type="button" style="width:13%;">
+                    Back</button>
+  <button class="btn btn-md btn-primary" type="button" style="width:13%;">
+                    Save</button>
+</div>
+ </div>
+ </div>
 </div>
 

@@ -30,6 +30,16 @@
 			      templateUrl   : "app/modules/activity/views/activity.html",
 			      controller    : "ActivityController"
 			  	}) 	
+		  	.state("viewActivity", {
+		      url          : "/view-activity",
+		      templateUrl   : "app/modules/activity/views/view-activity.html",
+		      controller    : "ViewActivityController"
+		  	})
+		  	.state("admin", {
+			      url          : "/admin",
+			      templateUrl   : "app/modules/admin/views/admin.html",
+			      controller    : "AdminController"
+			  	})
 		   .state('modules', {
 		      url: '/modules',
 		      "abstract" : true,

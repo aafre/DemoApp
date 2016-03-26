@@ -1,6 +1,6 @@
 (function(){
 	angular.module('session')
-	.service('sessionFactory', ['$window', function($window) {
+	.service('sessionFactory', ['$window','$state', function($window,$state) {
 		
 		var userSession = this;
 		

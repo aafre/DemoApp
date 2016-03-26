@@ -1,5 +1,14 @@
-<div class="container-fluid">
+<div ng-controller="HomeCtrl" class="container-fluid">
   <div class="page-header">
     <h1>Welcome</h1>      
-
+	<ul class="top-nav-right pull-right" > 
+		<li class="profile-icon">Hi Amit<img src="/MaintenenceClient/images/profile_pic.jpg" class="img-circle" alt="Profile pic" width="35" height="35">
+			<ul class="login-dropdown brder-tp">
+				<li class="btm_border"><a href ng-click="logout()">Log Out</a></li>
+			</ul>				
+		</li>
+	</ul>
+	</div>
+	</div>
+	
 <!-- Create another header for logged in user -->
